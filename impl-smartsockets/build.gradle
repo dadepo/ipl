@@ -4,7 +4,7 @@ dependencies {
     compile group: 'nl.junglecomputing', name: 'smartsockets', version: '1.70'
 }
 
-archivesBaseName = 'ipl-impl-smartsockets'
+archivesBaseName = 'ipl-spark-impl-smartsockets'
 
 jar {
     manifest {

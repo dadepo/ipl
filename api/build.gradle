@@ -1,4 +1,4 @@
-archivesBaseName = 'ipl'
+archivesBaseName = 'ipl-spark'
 
 def generatedResources = "$buildDir/generated-resources/main"
 

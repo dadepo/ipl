@@ -1,6 +1,6 @@
 apply from: "${rootProject.rootDir}/gradle/impl.gradle"
 
-archivesBaseName = 'ipl-impl-tcp'
+archivesBaseName = 'ipl-spark-impl-tcp'
 
 jar {
     manifest {

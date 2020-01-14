@@ -8,4 +8,4 @@ dependencies {
     compile project(':util')
 }
 
-archivesBaseName = 'ibis-compile'
+archivesBaseName = 'ibis-spark-compile'

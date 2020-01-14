@@ -4,4 +4,4 @@ dependencies {
     compile project(':api')
 }
 
-archivesBaseName = 'ibis-examples'
+archivesBaseName = 'ibis-spark-examples'

@@ -1,6 +1,6 @@
 apply from: "${rootProject.rootDir}/gradle/impl.gradle"
 
-archivesBaseName = 'ipl-impl-multi'
+archivesBaseName = 'ipl-spark-impl-multi'
 
 jar {
     manifest {

@@ -13,4 +13,4 @@ include 'benchmarks'
 include 'examples'
 include 'docs'
 
-rootProject.name = 'ipl'
+rootProject.name = 'ipl-spark'

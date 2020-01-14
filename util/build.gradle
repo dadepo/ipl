@@ -1,2 +1,2 @@
 apply from: "${rootProject.rootDir}/gradle/sub.gradle"
-archivesBaseName = 'ibis-util'
+archivesBaseName = 'ibis-spark-util'

@@ -5,4 +5,4 @@ dependencies {
     compile project(':util')
 }
 
-archivesBaseName = 'ibis-benchmarks'
+archivesBaseName = 'ibis-spark-benchmarks'
