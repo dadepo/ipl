@@ -14,6 +14,7 @@ These jars are:
 To generate these jars, follow the following procedure:
  
  - make sure to have maven install
+ - make sure to be using JDK 8 (TODO see how to remove this requirement)
  - from the root of the project run 
  - `./gradlew install`
  - The jars would be generated and can be copied from `~/.m2/repository/ipl-spark/`
