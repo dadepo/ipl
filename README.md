@@ -1,3 +1,19 @@
+# Usage with Spark
+
+In other to use ibis in Spark, some jars from ibis needs to be available in the classpath when running the Spark application.
+
+These jars are:
+ - ibis-spark-io-2.3.3.jar
+ - ibis-spark-util-2.3.3.jar
+ 
+ To generate these jars, follow the following procedure:
+ 
+ - make sure to have maven install
+ - from the root of the project run 
+ - `./gradlew install`
+ - The jars would be generated and can be copied from `~/.m2/repository/ipl-spark/`
+ 
+
 # Ibis Portability Layer
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1324956.svg)](https://doi.org/10.5281/zenodo.1324956)
