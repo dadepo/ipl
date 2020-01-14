@@ -1,18 +1,24 @@
 # Usage with Spark
 
-In other to use ibis in Spark, some jars from ibis needs to be available in the classpath when running the Spark application.
+In other to use ibis in Spark, Spark needs to be build with some jars from ibis
+and when running a Spark application some jars from ibis also needs to be available in the classpath.
+
+For instructions on how to build Spark for use with ibis serialization see the read me here: [Modified version of Spark](https://github.com/dadepo/spark/tree/v2.4.4-with-ibis)
+
+Find below the instructions on how to build the jars that needs to be on the classpath.
 
 These jars are:
  - ibis-spark-io-2.3.3.jar
  - ibis-spark-util-2.3.3.jar
  
- To generate these jars, follow the following procedure:
+To generate these jars, follow the following procedure:
  
  - make sure to have maven install
  - from the root of the project run 
  - `./gradlew install`
  - The jars would be generated and can be copied from `~/.m2/repository/ipl-spark/`
- 
+
+See [Modified version of Spark](https://github.com/dadepo/spark/tree/v2.4.4-with-ibis) for more instructions on how to use ibis serialization with spark and how to run the spark example applications 
 
 # Ibis Portability Layer
 
