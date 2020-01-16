@@ -26,6 +26,7 @@ import ibis.ipl.SendPort;
 import ibis.ipl.WriteMessage;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * This program is to be run as two instances. One is a server, the other a
@@ -36,13 +37,13 @@ import java.io.IOException;
 public class Hello {
 
     PortType portType = new PortType(PortType.COMMUNICATION_RELIABLE,
-            PortType.SERIALIZATION_DATA, PortType.RECEIVE_EXPLICIT,
+            PortType.SERIALIZATION_OBJECT_IBIS, PortType.RECEIVE_EXPLICIT,
             PortType.CONNECTION_ONE_TO_ONE);
 
     IbisCapabilities ibisCapabilities = new IbisCapabilities(
             IbisCapabilities.ELECTIONS_STRICT);
 
-    private void server(Ibis myIbis) throws IOException {
+    private void server(Ibis myIbis) throws IOException, ClassNotFoundException {
 
         // Create a receive port and enable connections.
         ReceivePort receiver = myIbis.createReceivePort(portType, "server");
@@ -50,7 +51,7 @@ public class Hello {
 
         // Read the message.
         ReadMessage r = receiver.receive();
-        String s = r.readString();
+        TimeUnit s = (TimeUnit) r.readObject();
         r.finish();
         System.out.println("Server received: " + s);
 
@@ -66,7 +67,8 @@ public class Hello {
 
         // Send the message.
         WriteMessage w = sender.newMessage();
-        w.writeString("Hi there");
+//      w.writeObject(PrimaryColor.RED); // This also can be used to demonstrate the error
+        w.writeObject(TimeUnit.SECONDS);
         w.finish();
 
         // Close ports.

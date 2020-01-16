@@ -284,7 +284,7 @@ class SunJavaStuff extends JavaDependantStuff {
                 return newInstance.invoke(objectStreamClass, (java.lang.Object[]) null);
             }
         } catch (Throwable e) {
-            // System.out.println("newInstance fails: got exception " + e);
+            System.out.println("newInstance fails: got exception " + e);
             return null;
         }
     }
